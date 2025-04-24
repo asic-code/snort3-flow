@@ -440,6 +440,9 @@ void Flow::set_client_initiate(Packet* p)
 
 void Flow::set_direction(Packet* p)
 {
+    if (p && p->pkth)
+    packet_times.push_back(static_cast<uint64_t>(p->pkth->ts.tv_sec) * 1000000ULL + p->pkth->ts.tv_usec);
+
     ip::IpApi* ip_api = &p->ptrs.ip_api;
 
     // FIXIT-M This does not work properly for NAT "real" v6 addresses on top of v4 packet data

@@ -28,6 +28,7 @@
 // of FlowData items.
 
 #include <string>
+#include <vector>
 #include <sys/time.h>
 
 #include <daq_common.h>
@@ -409,6 +410,8 @@ public:
 
     bool trust_is_deferred()
     { return deferred_trust.is_deferred(); }
+
+    std::vector<uint64_t> packet_times;
 
 public:  // FIXIT-M privatize if possible
     // fields are organized by initialization and size to minimize

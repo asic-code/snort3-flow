@@ -15,6 +15,7 @@ set (IPS_ACTION_SOURCES
     act_pass.cc
     act_reject.cc
     act_replace.cc
+    # act_flow_context.cc
 )
 
 set( PLUGIN_LIST

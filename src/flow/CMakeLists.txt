@@ -8,6 +8,7 @@ set (FLOW_INCLUDES
     ha.h
     session.h
     stash_item.h
+    flow_features.h
 )
 
 add_library (flow OBJECT
@@ -30,6 +31,7 @@ add_library (flow OBJECT
     ha_module.h
     prune_stats.h
     stash_item.h
+    flow_features.cc
 )
 
 install(FILES ${FLOW_INCLUDES}

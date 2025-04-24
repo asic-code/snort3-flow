@@ -47,6 +47,7 @@ extern const BaseApi* ips_sha512;
 extern const BaseApi* ips_so;
 extern const BaseApi* ips_vba_data;
 
+
 #ifdef STATIC_IPS_OPTIONS
 extern const BaseApi* ips_ack[];
 extern const BaseApi* ips_asn1[];
@@ -88,6 +89,7 @@ extern const BaseApi* ips_tos[];
 extern const BaseApi* ips_ttl[];
 extern const BaseApi* ips_bufferlen[];
 extern const BaseApi* ips_window[];
+extern const BaseApi* ips_flow_iat[];
 #ifdef HAVE_HYPERSCAN
 extern const BaseApi* ips_regex[];
 extern const BaseApi* ips_sd_pattern[];
@@ -163,6 +165,7 @@ void load_ips_options()
     PluginManager::load_plugins(ips_ttl);
     PluginManager::load_plugins(ips_bufferlen);
     PluginManager::load_plugins(ips_window);
+    PluginManager::load_plugins(ips_flow_iat);
 #ifdef HAVE_HYPERSCAN
     PluginManager::load_plugins(ips_regex);
     PluginManager::load_plugins(ips_sd_pattern);

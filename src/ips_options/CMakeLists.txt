@@ -46,6 +46,7 @@ SET( PLUGIN_LIST
     ips_window.cc
     ips_vba_data.cc
     ips_vba_data.h
+    ips_flow_iat.cc
 )
 
 
@@ -139,6 +140,7 @@ else (STATIC_IPS_OPTIONS)
     add_dynamic_module(ips_tos ips_options ips_tos.cc)
     add_dynamic_module(ips_ttl ips_options ips_ttl.cc)
     add_dynamic_module(ips_window ips_options ips_window.cc)
+    add_dynamic_module(ips_flow_iat ips_options ips_flow_iat.cc)
 if ( HAVE_HYPERSCAN )
     add_dynamic_module(ips_regex ips_options ips_regex.cc)
     add_dynamic_module(ips_sd_pattern ips_options ips_sd_pattern.cc sd_credit_card.cc sd_credit_card.h)

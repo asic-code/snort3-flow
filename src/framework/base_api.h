@@ -33,7 +33,7 @@
 
 // set options to API_OPTIONS to ensure compatibility
 #ifndef API_OPTIONS
-#include "framework/api_options.h"
+// #include "framework/api_options.h"
 #endif
 
 // set the reserved field to this to be future proof
